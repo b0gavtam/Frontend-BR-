@@ -10,27 +10,27 @@
 </head>
 <body style="background: linear-gradient(to right, #0f0c29, #302b63, #24243e); ">
     <form>
-        <div class="container p-5" style="background: linear-gradient(to left, #1a2a6c, #b21f1f, #fdbb2d); border-radius: 4px; ">
+        <div class="container p-5" style=" background-color: white; border-radius: 4px; ">
             <h1 class="text-center" style="font-weight: bold; font-style: italic; ">Űrlap</h1>
             <div class="p-3 form-check" >
-            <label for="InputEmail" class="form-label">Email cím</label>
-            <input type="email" class="form-control" id="InputEmail">
+                <label for="email" class="form-label">Email cím</label>
+                <input type="email" class="form-control" id="email">
             </div>
             <div class="p-3 form-check">
-            <label for="InputPassword" class="form-label">Jelszó</label>
-            <input type="password" class="form-control" id="InputPassword">
+                <label for="pwd" class="form-label">Jelszó</label>
+                <input type="password" class="form-control" id="pwd" >
             </div>
             <div class="p-3 form-check">
                 <label for="irszam" class="form-label">Irányítószám</label>
-            <input type="number" placeholder="0000" class="form-control" id="irszam" name="irszam" min="1011">
+                <input type="text" inputmode="numeric" pattern="[0-9]*" placeholder="0000" class="form-control" id="irszam" name="irszam" min="1007">
             </div>
             <div class="p-3 form-check">
                 <label for="passwordcheck" class="form-label"></label>
             <textarea name="passwordcheck"  id="pwordcheck" class="form-control" cols="30" rows="10" maxlength="100" placeholder="Ha elfelejtette jelszavát, itt állíthat be biztonsági kérdést hozzá."></textarea>
             </div>
 
+            <div class="error"></div>
             <button type="submit" class="btn btn-primary p-2 m-2" >Submit</button>
-            <div class="error alert-danger"></div>
         </div>
       </form>
 </body>
