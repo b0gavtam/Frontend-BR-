@@ -7,7 +7,7 @@ $(function(){
         event.preventDefault();
     })
     $("input").change(function(){
-       
+
         let email = $(this).val().trim();
         let pwd = $(this).val().trim();
         let irsz = $(this).val().trim();
