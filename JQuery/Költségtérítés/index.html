@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script defer src="script.js"></script>
+    <script src="jquery-3.7.1.min.js"></script>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container p-5">
+        <h1 class="text-center">Költségvetés</h1>
+        <div class="elkeritett p-2">
+            <div class="tipus p-2 flex-column">
+                <span>Üzemanyag típusa</span>
+                <label for="benzin"><input type="radio" name="uzemtipus" class="form-group" id="benzin">Benzin</label>
+                <label for="gázolaj"><input type="radio" name="uzemtipus" class="form-group" id="gazolaj">Gázolaj</label>
+                <label for="elektromos"><input type="radio" name="uzemtipus" class="form-group" id="elektromos">Elektromos</label>
+                <label for="LPG"><input type="radio" name="uzemtipus" class="form-group" id="lpg">LPG</label>
+                
+            </div>
+            <div class="amortdij p-2 flex-column">
+                <span>Amortizációs díj(Ft/km)</span>
+                <label for="18"><input type="radio" name="amortdijszam" id="18">18</label>
+                <label for="30"><input type="radio" name="amortdijszam" id="30">30</label>
+                
+            </div>
+        </div> 
+        <label for="egysegar" class="p-2"><input type="text" name="egysegar">Ft/l</label>
+        <br>
+        <select name="hengerurtartalom" id="">
+            <option value="1000">1000 cm3</option>
+            <option value="1001-1500">1001-1500 cm3</option>
+            <option value="1501-2000">1501-2000 cm3</option>
+            <option value="2001-3000">2001-3000 cm3</option>
+            <option value="3000+">3001 cm3 felett</option>
+        </select>
+        <br>
+        <div>
+            <label for="rendszam" class="m-2">Rendszám: <input type="text" id="rendszam"></label>
+            <br>
+            <label for="gyarto" class="m-2">Gyártó, típus: <input type="text" id="gyarto"></label>
+            <br>
+            <label for="ut" class="m-2">Honnan-hová: <input type="text" id="ut"></label>
+            <br>
+            <label for="megtetttav" class="m-2">Megtett távolság: <input type="text" id="megtettav"><label for="megtettav"> km</label></label>
+        </div>
+        <button>Számol</button>
+
+
+    </div>
+</body>
+</html>

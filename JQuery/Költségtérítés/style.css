@@ -1,0 +1,11 @@
+.tipus,.amortdij{ 
+    border: solid 1px;
+    display: flex;
+    align-items: center;
+    margin: auto;
+}
+
+.elkeritett{
+    display: flex;
+    align-content: space-between;
+}
