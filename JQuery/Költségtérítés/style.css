@@ -9,3 +9,13 @@
     display: flex;
     align-content: space-between;
 }
+.container{
+    border-radius: 10px;
+    background-color: darkslateblue;
+    color: aliceblue;
+    max-width: fit-content;
+}
+input{
+    text-shadow: 2px;
+    
+}

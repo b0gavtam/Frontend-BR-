@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body style="background-color: black;">
     <div class="container p-5">
         <h1 class="text-center">Költségvetés</h1>
         <div class="elkeritett p-2">
@@ -28,26 +28,22 @@
                 
             </div>
         </div> 
-        <label for="egysegar" class="p-2"><input type="text" name="egysegar">Ft/l</label>
+        <label for="egysegar" class="p-2"><input type="text" name="egysegar" required>Ft/l</label>
         <br>
-        <select name="hengerurtartalom" id="">
-            <option value="1000">1000 cm3</option>
-            <option value="1001-1500">1001-1500 cm3</option>
-            <option value="1501-2000">1501-2000 cm3</option>
-            <option value="2001-3000">2001-3000 cm3</option>
-            <option value="3000+">3001 cm3 felett</option>
+        <select name="hengerurtartalom" id="hengerurtartalom" required>
+            
         </select>
         <br>
-        <div>
-            <label for="rendszam" class="m-2">Rendszám: <input type="text" id="rendszam"></label>
+        <div class="form-group">
+            <label for="rendszam" class="m-2">Rendszám: <input type="text" id="rendszam" required></label>
             <br>
-            <label for="gyarto" class="m-2">Gyártó, típus: <input type="text" id="gyarto"></label>
+            <label for="gyarto" class="m-2">Gyártó, típus: <input type="text" id="gyarto" required></label>
             <br>
-            <label for="ut" class="m-2">Honnan-hová: <input type="text" id="ut"></label>
+            <label for="ut" class="m-2">Honnan-hová: <input type="text" id="ut" required></label>
             <br>
-            <label for="megtetttav" class="m-2">Megtett távolság: <input type="text" id="megtettav"><label for="megtettav"> km</label></label>
+            <label for="megtetttav" class="m-2">Megtett távolság: <input type="text" id="megtettav" required><label for="megtettav"> km</label></label>
         </div>
-        <button>Számol</button>
+        <button type="submit" class="btn btn-warning">Számol</button>
 
 
     </div>
