@@ -1,9 +1,24 @@
 $(function(){
     //$.ajax({}) $.get() $.post({})
-    $.get('https://jsonplaceholder.typicode.com/todos/1')
+    let url = "https://jsonplaceholder.typicode.com/todos";
+    $.get(url)
     .done(function(d){
         console.log(d)
+        let size = d.length
+        $("input").attr("max", size);
+        $("input").change(function(){
+            let num = $(this).val(); //input value attribútum kiolvasása
+            url += "/" + num;
+            $.ajax({
+                url : url, //kulcs : érték
+                method: "GET",
+                dataType: "json"
+            })
+            .done(function(d){
+                $(".content").append(JSON.stringify(d))
+            })
+        })
     })
-    .fail(function(){})
-    .always(function(){})
+    .fail(function(){})//hiba esetén
+    .always(function(){}) //mindenképp lefut
 })
