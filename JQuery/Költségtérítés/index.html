@@ -1,11 +1,17 @@
 <!DOCTYPE html>
 <html lang="hu">
 
+<html lang="hu">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Költségtérítés</title>
+    <title>Költségtérítés</title>
     <link rel="stylesheet" href="bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <script src="jquery-3.7.1.min.js"></script>
+    <script defer src="script.js"></script>
     <!-- <link rel="stylesheet" href="style.css"> -->
     <script src="jquery-3.7.1.min.js"></script>
     <script defer src="script.js"></script>
@@ -99,6 +105,96 @@
 
             </form>
         </section>
+
+<body>
+    <div class="container">
+        <div class="col-4"></div>
+        <section class="mt-5 w p-3 border border-dark rounded bg-dark text-white col-md-6 offset-md-3">
+            <h1 class="display-6 mb-3 text-center">Költségtérítés</h1>
+            <form>
+
+                <div class="row mb-3">
+                    <div class="col" id="fuel">
+                        <label class="form-label">Üzemanyag</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="uzemanyagInput" id="benzin"
+                                value="benzin" required>
+                            <label class="form-check-label" for="benzin">Benzin</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="uzemanyagInput" id="dizel" value="diesel"
+                                required>
+                            <label class="form-check-label" for="dizel">Dizel</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="uzemanyagInput" id="elektromos"
+                                value="elektromos" required>
+                            <label class="form-check-label" for="elektromos">Elektromos</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="uzemanyagInput" id="lpg" value="LPG"
+                                required>
+                            <label class="form-check-label" for="lpg">LPG</label>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <label class="form-label">Amortizációs díj</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="amortizaciosDijInput" id="igen"
+                                value="18" required>
+                            <label class="form-check-label" for="igen">18</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="amortizaciosDijInput" id="nem"
+                                value="30" required>
+                            <label class="form-check-label" for="nem">30</label>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="mb-3">
+                    <label for="arLiterInput" class="form-label">Ft/l</label>
+                    <input type="text" class="form-control" id="arLiterInput" required>
+                </div>
+
+
+                <div class="mb-3">
+                    <label for="cm3Input" class="form-label">Motor cm3:</label>
+                    <select class="form-select" id="cm3Input" required>
+                        <option value="-1"></option>
+                    </select>
+                </div>
+
+
+                <div class="mb-3">
+                    <label for="rendszmInput" class="form-label">Rendszám</label>
+                    <input type="text" class="form-control" id="rendszmInput" required>
+                </div>
+                <div class="mb-3">
+                    <label for="gyartoInput" class="form-label">Gyártó típus</label>
+                    <input type="text" min="6" class="form-control" id="gyartoInput" required>
+                </div>
+                <div class="mb-3">
+                    <label for="HonnanHovaInput" class="form-label">Honnan-Hova:</label>
+                    <input type="text" class="form-control" id="HonnanHovaInput" required>
+                </div>
+                <div class="mb-3">
+                    <label for="megtettTInput" class="form-label">Megtett távolság(km):</label>
+                    <input type="text" maxlength="100" class="form-control" id="megtettTInput">
+                </div>
+
+                <button type="submit" class="btn btn-primary" disabled>Számítás</button>
+                <div class="error text-danger fw-bold"></div>
+
+
+
+
+
+
+            </form>
+        </section>
 </body>
+
 
 </html>
